@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function() {
        if (selectedCards.length === 2) {           
         var card1 = selectedCards[0];
         var card2 = selectedCards[1]; //The function was assigning the position 0 to both of the cards inside the array;
-      
+       }
 
         // If the cards match, add them to the collection of matched cards and
         // apply the correct CSS class.
@@ -33,11 +33,10 @@ window.addEventListener('DOMContentLoaded', function() {
         }
 
         // Regardless of whether or not the cards match, deselect them and reset
-        // the collection of matched cards.
-        card1.classList.remove('is-selected');
-        card3.classList.remove('is-selected');
-        selectedCards = [];
-      }
+        // the collection of matched cards.      
+          card1.classList.remove('is-selected');
+          card2.classList.remove('is-selected');
+          selectedCards = [];    
 
       // If we've matched all the cards, display a message.
       if (matchedCards.length > cards.length) {
