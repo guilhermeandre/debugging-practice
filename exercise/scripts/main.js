@@ -35,11 +35,11 @@ window.addEventListener('DOMContentLoaded', function() {
         // Regardless of whether or not the cards match, deselect them and reset
         // the collection of matched cards.      
           card1.classList.remove('is-selected');
-          card2.classList.remove('is-selected');
+          card2.classList.remove('is-selected'); //Variable name was incorrect, card3. There is no variable card3 inside the array.
           selectedCards = [];    
 
       // If we've matched all the cards, display a message.
-      if (matchedCards.length > cards.length) {
+      if (matchedCards.length >= cards.length) {  //Conditional was expecting values greater than 6, added = to match 6 or greater (would not happen as long as the game has only 6 cards.)
         alert('You matched all the cards, nice job!');
       }
     });
