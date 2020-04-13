@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background: #efefef;
+  background: #ffff;
   color: #222;
   font-family: Helvetica, sans-serif;
   font-size: 1.6rem;
@@ -54,7 +54,29 @@ main {
 If the card is either selected or matched, display the character by setting
 the background colour to white.
 */
-.card.is-selected,
-.card.is-matched {
+.card.is-selected {
   background: #fff;
+}
+
+.card.is-matched {
+  color: #88b04b;
+  background-color: #eee;
+}
+
+.card:hover {
+  box-shadow: 0rem 0rem 0rem 1rem #88b04b;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
 }
