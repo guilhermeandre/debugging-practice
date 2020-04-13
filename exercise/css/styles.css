@@ -68,7 +68,7 @@ the background colour to white.
 }
 
 #overlay {
-  position: absolute;
+  position: fixed;
   display: none;
   width: 100%;
   height: 100%;
