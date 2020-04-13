@@ -6,8 +6,8 @@ window.addEventListener('DOMContentLoaded', function() {
   cards.forEach(function(card) {
     card.addEventListener('click', function() {
 
-      // If the card has already been matched, ignore it.
-      if (card.classList.contains('is-matched')) {
+      // If the card has already been matched or selected, ignore it.
+      if (card.classList.contains('is-matched') || card.classList.contains('is-selected')) {
         return;
       }
 
@@ -41,6 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
       // If we've matched all the cards, display a message.
       if (matchedCards.length >= cards.length) {  //Conditional was expecting values greater than 6, added = to match 6 or greater (would not happen as long as the game has only 6 cards.)
         alert('You matched all the cards, nice job!');
+        document.getElementById("overlay").style.display = "flex";
       }
     });
   });
